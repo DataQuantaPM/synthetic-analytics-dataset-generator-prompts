@@ -1,5 +1,5 @@
 ```
-analytics-dataset-prompt-collection/
+synthetic-analytics-dataset-generator-prompts/
 │
 ├── README.md
 ├── Project Structure.md
