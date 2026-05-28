@@ -61,7 +61,7 @@ Each dataset folder contains:
 | No. | Dataset Project | Main Analysis Use Case | Link Access |
 |---|---|---|---|
 | 01 | SaaS Funnel Analysis | Funnel conversion, drop-off analysis, revenue leakage | link |
-| 02 | SaaS Retention & Cohort Analysis | Retention, churn, cohort analysis, aha moment analysis | link |
+| 02 | SaaS Retention & Cohort Analysis | Retention, churn, cohort analysis, aha moment analysis | ( Click Here )[https://github.com/DataQuantaPM/synthetic-analytics-dataset-generator-prompts/tree/main/Retention%20Cohort%20Analysis] |
 
 More datasets may be added in the future.
 
