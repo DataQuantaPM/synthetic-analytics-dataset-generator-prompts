@@ -10,6 +10,8 @@ The main goal is to create event-level data that behaves like a real SaaS produc
 
 ---
 
+<br>
+
 ## Who This Is For
 
 This prompt is best for learners who already understand basic analytics concepts such as:
@@ -25,6 +27,8 @@ This prompt is best for learners who already understand basic analytics concepts
 If you are completely new to data analytics, it is better to start with a simpler public dataset first before building a custom synthetic dataset.
 
 ---
+
+<br>
 
 ## What This Prompt Generates
 
@@ -43,70 +47,79 @@ The dataset should be exported as:
 
 ```text
 saas_retention_events_raw.csv
+```
 
 This should be the only output file.
 
 No validation table should be exported.
 
-Expected Raw Dataset Schema
+---
+
+<br>
+
+## Expected Raw Dataset Schema
 
 The raw dataset should look like production event data, not a pre-aggregated analytics table.
 
-Column	Description
-event_id	Unique identifier for each event
-user_id	Unique identifier for each user
-event_time	Timestamp of the event
-event_name	Type of user event
-source	User acquisition source
-device	User device
-country	User country
-plan_type	User plan at the time of the event
-subscription_status	Subscription status at the time of the event
-revenue	Revenue generated from subscription events
+| Column                | Description                                  |
+| --------------------- | -------------------------------------------- |
+| `event_id`            | Unique identifier for each event             |
+| `user_id`             | Unique identifier for each user              |
+| `event_time`          | Timestamp of the event                       |
+| `event_name`          | Type of user event                           |
+| `source`              | User acquisition source                      |
+| `device`              | User device                                  |
+| `country`             | User country                                 |
+| `plan_type`           | User plan at the time of the event           |
+| `subscription_status` | Subscription status at the time of the event |
+| `revenue`             | Revenue generated from subscription events   |
 
 The raw dataset should not include analytical or derived fields such as:
 
-signup_date
-signup_week
-cohort_start_date
-event_week
-cohort_index
-max_observable_week
-churned
-churn_status
-churn_week
-is_core_feature
-reached_aha_moment
+- `signup_date`
+- `signup_week`
+- `cohort_start_date`
+- `event_week`
+- `cohort_index`
+- `max_observable_week`
+- `churned`
+- `churn_status`
+- `churn_week`
+- `is_core_feature`
+- `reached_aha_moment`
 
 These fields should be calculated later during SQL analysis.
 
-What Makes This Dataset Realistic
+---
+<br>
+
+## What Makes This Dataset Realistic
 
 This dataset is designed to include realistic SaaS event behavior, not just random rows.
 
 Key realism layers include:
 
-Sequential user behavior after signup
-Weekly user activity patterns
-Retention decay over time
-Acquisition source differences
-Plan changes over time
-Event-level plan_type and subscription_status
-Early feature usage behavior
-Aha moment logic
-Churn behavior with observation-window awareness
-Messy data such as typos, null values, duplicates, and inconsistent labels
+- Sequential user behavior after signup
+- Weekly user activity patterns
+- Retention decay over time
+- Acquisition source differences
+- Plan changes over time
+- Event-level plan_type and subscription_status
+- Early feature usage behavior
+- Aha moment logic
+- Churn behavior with observation-window awareness
+- Messy data such as typos, null values, duplicates, and inconsistent labels
 
 The dataset should not be too perfect.
 
 For example:
 
-Not all ads users should be bad
-Not all referral users should be good
-Some free users should still retain
-Some paid users should still churn
-Some users without aha moment should still stay active
-Some users with aha moment should still churn
+- Not all ads users should be bad
+- Not all referral users should be good
+- Some free users should still retain
+- Some paid users should still churn
+- Some users without aha moment should still stay active
+- Some users with aha moment should still churn
 
 The goal is to make the dataset realistic enough for meaningful analysis.
 
