@@ -1,3 +1,5 @@
+# Repository Structure
+
 ```
 synthetic-analytics-dataset-generator-prompts/
 │
@@ -26,9 +28,7 @@ synthetic-analytics-dataset-generator-prompts/
     └── dataset.csv
 ```
 
-
-
-## Repository Structure
+---
 
 The repository is organized by dataset case study:
 
