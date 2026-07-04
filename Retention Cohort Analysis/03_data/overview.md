@@ -426,6 +426,8 @@ The simulator intentionally separates raw operational data from analytical outpu
 
 The lifecycle of generated data follows the sequence below.
 
+```
+
 Configuration
 
 ↓
@@ -459,6 +461,8 @@ Dashboard
 ↓
 
 Business Insight
+
+```
 
 This mirrors the lifecycle commonly found in modern analytics teams.
 
