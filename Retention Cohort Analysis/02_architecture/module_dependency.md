@@ -61,23 +61,23 @@ Every dependency should be explicit.
      Users                Scenarios              Lifecycle
       │                       │                       │
       └───────────────┬───────────────┬───────────────┘
-                      ▼
-                  Sessions
-                      │
-                      ▼
-                    Events
-                      │
-          ┌───────────┴─────────────┐
-          ▼                         ▼
-   Subscription                 Revenue
-          │                         │
-          └───────────────┬─────────┘
-                          ▼
-                    Dirty Data Engine
-                          ▼
-                    Validation Engine
-                          ▼
-                      Export Engine
+                                      ▼
+                                  Sessions
+                                      │
+                                      ▼
+                                    Events
+                                      │
+                          ┌───────────┴─────────────┐ 
+                          ▼                         ▼
+                   Subscription                 Revenue
+                          │                         │
+                          └───────────────┬─────────┘
+                                          ▼
+                                    Dirty Data Engine
+                                          ▼
+                                    Validation Engine
+                                          ▼
+                                      Export Engine
 
 ---
 
