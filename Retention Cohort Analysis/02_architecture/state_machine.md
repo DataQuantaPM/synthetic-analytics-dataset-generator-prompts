@@ -447,6 +447,8 @@ Any event that violates the state capability matrix is rejected before being wri
 
 This guarantees that every event sequence remains consistent with the user's lifecycle progression.
 
+---
+
 # 11. Terminal States
 
 Terminal states represent the end of active lifecycle progression.
